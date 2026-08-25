@@ -23,7 +23,7 @@ export default function StatsPage() {
     hidden:  { opacity: 0, y: 16 },
     visible: (i: number) => ({
       opacity: 1, y: 0,
-      transition: { type: 'spring', stiffness: 380, damping: 28, delay: i * 0.07 },
+      transition: { type: 'spring' as const, stiffness: 380, damping: 28, delay: i * 0.07 },
     }),
   };
 

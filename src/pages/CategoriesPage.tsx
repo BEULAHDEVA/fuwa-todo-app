@@ -34,7 +34,7 @@ export default function CategoriesPage() {
   };
   const itemVariants: Variants = {
     hidden:  { opacity: 0, y: 16, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 400, damping: 28 } },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring' as const, stiffness: 400, damping: 28 } },
   };
 
   return (
@@ -105,7 +105,7 @@ export default function CategoriesPage() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -14 }}
-                transition={{ type: 'spring', stiffness: 380, damping: 28 }}
+                transition={{ type: 'spring' as const, stiffness: 380, damping: 28 }}
               >
                 {/* List header */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
