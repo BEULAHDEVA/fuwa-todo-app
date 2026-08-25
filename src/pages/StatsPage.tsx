@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { useTodos } from '../context/TodoContext';
 import ProgressRing from '../components/ProgressRing';
 import PageTransition from '../components/PageTransition';
@@ -19,7 +19,7 @@ export default function StatsPage() {
     return { ...cat, total: catTodos.length, done: catDone };
   });
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden:  { opacity: 0, y: 16 },
     visible: (i: number) => ({
       opacity: 1, y: 0,

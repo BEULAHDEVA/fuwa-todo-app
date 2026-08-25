@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useTodos } from '../context/TodoContext';
 import TodoCard from '../components/TodoCard';
@@ -28,11 +28,11 @@ export default function CategoriesPage() {
   const filteredTodos  = activeId ? todosForCategory(activeId).filter(t => !t.completed) : [];
   const activeCategory = categories.find(c => c.id === activeId);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.07 } },
   };
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden:  { opacity: 0, y: 16, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 400, damping: 28 } },
   };
