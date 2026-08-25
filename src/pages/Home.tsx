@@ -166,7 +166,7 @@ export default function Home() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}
+              className="fuwa-grid"
             >
               <AnimatePresence mode="popLayout">
                 {activeTodos.length === 0 ? (
@@ -236,7 +236,7 @@ export default function Home() {
                     style={{ overflow: 'hidden' }}
                     transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                   >
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', paddingBottom: '1rem' }}>
+                    <div className="fuwa-grid" style={{ paddingBottom: '1rem' }}>
                       <AnimatePresence mode="popLayout">
                         {completedTodos.map(todo => <TodoCard key={todo.id} todo={todo} />)}
                       </AnimatePresence>

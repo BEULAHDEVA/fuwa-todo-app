@@ -57,7 +57,8 @@ export default function CategoriesPage() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem', marginBottom: '1.75rem' }}
+            className="fuwa-grid-compact"
+            style={{ marginBottom: '1.75rem' }}
           >
             {categories.map(cat => {
               const count  = todosForCategory(cat.id).filter(t => !t.completed).length;
@@ -126,7 +127,7 @@ export default function CategoriesPage() {
                   </motion.button>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', paddingBottom: '0.75rem' }}>
+                <div className="fuwa-grid" style={{ paddingBottom: '0.75rem' }}>
                   {filteredTodos.length === 0 ? (
                     <div className="empty-state" style={{ padding: '1.5rem 1rem' }}>
                       <FuwaMascot mood="sleepy" size={72} />

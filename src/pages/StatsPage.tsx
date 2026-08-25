@@ -43,7 +43,7 @@ export default function StatsPage() {
           </div>
 
           {/* ── Top stats row ──────────────────────────────── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem', marginBottom: '1.125rem' }}>
+          <div className="fuwa-grid-compact" style={{ marginBottom: '1.125rem' }}>
             {/* Streak */}
             <motion.div
               className="stat-card"
